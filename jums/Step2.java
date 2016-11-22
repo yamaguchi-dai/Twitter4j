@@ -34,9 +34,14 @@ public class Step2 {
 			 */
 			 ResponseList<Status> list_status = twitter.getUserTimeline("");
 			  for (Status status : list_status) {
-			      System.out.println("ツイート：" + status.getText());
+			      System.out.println("ツイートID"+status.getId()+":" + status.getText());
 			  }
-
+			  /*Statusメソッドはたくさんあります。
+			   * get.Idはツイートの識別番号です。全ツイートに割り振られています
+			   * 自分で調べてみましょう
+			   */
+			
+			  
 			
 		} catch (TwitterException e) {// エラーのキャッチを行う
 
