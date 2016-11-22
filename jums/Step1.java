@@ -6,7 +6,7 @@ import twitter4j.TwitterFactory;
 import twitter4j.User;
 import twitter4j.auth.AccessToken;
 
-public class Twitter4j {
+public class Step1 {
 	public static void main(String[] args){
 		
 		//Twitterdeveloperprogramで取得した各値をセットしていく
@@ -38,8 +38,9 @@ public class Twitter4j {
 		  System.out.println(user.isProtected());//自分のアカウントに鍵がついてるか取得する
 		  System.out.println(user.getStatusesCount()); //呟きの数を取得
 
-		} catch (TwitterException e) {
-			// TODO 自動生成された catch ブロック
+		} catch (TwitterException e) {//エラーのキャッチを行う
+		
+			System.out.println("エラーが発生しました:"+e);
 			e.printStackTrace();
 		}//Userオブジェクトを作成
 		
